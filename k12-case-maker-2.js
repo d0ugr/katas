@@ -1,5 +1,5 @@
-const makeCase = function(input, format)
-{
+const makeCase = function(input, format) {
+
   const vowels = "aeiou";
 
   let i      = 0;
@@ -7,7 +7,6 @@ const makeCase = function(input, format)
   let result = "";
 
   input = input.trim();
-//  if (typeof format !== "object") {
   if (Object.prototype.toString.call(format) !== "[object Array]") {
     format = [ format ];
   }
@@ -16,29 +15,31 @@ const makeCase = function(input, format)
   for (j = 0; j < format.length; j++) {
     result = "";
     switch (format[j]) {
-      case "pascal":
-        input = " " + input;
-      case "camel":
-        for (i = 0; i < input.length; i++) {
-          result += (input[i] === " " ? input[i++ + 1].toUpperCase() : input[i]);
-        }
-        break;
-      case "snake":
-        for (i = 0; i < input.length; i++) {
-          result += (input[i] === " " ? "_" : input[i]);
-        }
-        break;
-      case "kebab":
-        for (i = 0; i < input.length; i++) {
-          result += (input[i] === " " ? "-" : input[i]);
-        }
-        break;
-      case "title":
-        result = input[0].toUpperCase();
-        for (i = 1; i < input.length; i++) {
-          result += (input[i] !== " " && input[i - 1] === " " ? input[i].toUpperCase() : input[i]);
-        }
-        break;
+    case "pascal":
+      input = " " + input;
+      break;
+    case "camel":
+      input = " " + input;
+      for (i = 0; i < input.length; i++) {
+        result += (input[i] === " " ? input[i++ + 1].toUpperCase() : input[i]);
+      }
+      break;
+    case "snake":
+      for (i = 0; i < input.length; i++) {
+        result += (input[i] === " " ? "_" : input[i]);
+      }
+      break;
+    case "kebab":
+      for (i = 0; i < input.length; i++) {
+        result += (input[i] === " " ? "-" : input[i]);
+      }
+      break;
+    case "title":
+      result = input[0].toUpperCase();
+      for (i = 1; i < input.length; i++) {
+        result += (input[i] !== " " && input[i - 1] === " " ? input[i].toUpperCase() : input[i]);
+      }
+      break;
     }
     if (result !== "") {
       input = result;
@@ -49,16 +50,16 @@ const makeCase = function(input, format)
   for (j = 0; j < format.length; j++) {
     result = "";
     switch (format[j]) {
-      case "vowel":
-        for (i = 0; i < input.length; i++) {
-          result += (vowels.indexOf(input[i]) !== -1 ? input[i].toUpperCase() : input[i]);
-        }
-        break;
-      case "consonant":
-        for (i = 0; i < input.length; i++) {
-          result += (vowels.indexOf(input[i]) === -1 ? input[i].toUpperCase() : input[i]);
-        }
-        break;
+    case "vowel":
+      for (i = 0; i < input.length; i++) {
+        result += (vowels.indexOf(input[i]) !== -1 ? input[i].toUpperCase() : input[i]);
+      }
+      break;
+    case "consonant":
+      for (i = 0; i < input.length; i++) {
+        result += (vowels.indexOf(input[i]) === -1 ? input[i].toUpperCase() : input[i]);
+      }
+      break;
     }
     if (result !== "") {
       input = result;
@@ -68,16 +69,17 @@ const makeCase = function(input, format)
   // Handle precendence level "upper, lower":
   for (j = 0; j < format.length; j++) {
     switch (format[j]) {
-      case "upper":
-        input = input.toUpperCase();
-        break;
-      case "lower":
-        input = input.toLowerCase();
-        break;
+    case "upper":
+      input = input.toUpperCase();
+      break;
+    case "lower":
+      input = input.toLowerCase();
+      break;
     }
   }
 
   return input;
+
 };
 
 console.log(makeCase("this is a string", "camel"));

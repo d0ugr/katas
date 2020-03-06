@@ -1,5 +1,5 @@
-const multiplicationTable = function(maxValue)
-{
+const multiplicationTable = function(maxValue) {
+
   let result = "";
 
   for (let i = 1; i <= maxValue; i++) {
@@ -10,6 +10,7 @@ const multiplicationTable = function(maxValue)
   }
 
   return result;
+
 };
 
 console.log(multiplicationTable(1));

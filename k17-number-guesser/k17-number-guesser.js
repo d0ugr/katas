@@ -20,23 +20,18 @@ while (guess !== secretNumber) {
         attempts++;
         if (guess === secretNumber) {
           console.log("You got it! You took " + attempts + " attempts!");
-        }
-        else if (guess < secretNumber) {
+        } else if (guess < secretNumber) {
           console.log("Too Low!");
-        }
-        else {
+        } else {
           console.log("Too High!");
         }
-      }
-      else {
+      } else {
         console.log("Already Guessed!");
       }
-    }
-    else {
+    } else {
       console.log("Not a number! Try again!");
     }
-  }
-  else {
+  } else {
     break;
   }
 }

@@ -1,5 +1,5 @@
-function generateBoard(whiteQueen, blackQueen)
-{
+const generateBoard = function(whiteQueen, blackQueen) {
+
   const board = [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -15,10 +15,11 @@ function generateBoard(whiteQueen, blackQueen)
   board[blackQueen[0]][blackQueen[1]] = 1;
 
   return board;
-}
 
-function queenThreat(board)
-{
+};
+
+const queenThreat = function(board) {
+
   let wx = 0;
   let wy = 0;
   let bx = 0;
@@ -59,7 +60,8 @@ function queenThreat(board)
   }
 
   return (wx === bx || wy === by || Math.abs(bx - wx) === Math.abs(by - wy));
-}
+
+};
 
 let whiteQueen = [0, 0];
 let blackQueen = [5, 7];

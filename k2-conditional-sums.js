@@ -1,5 +1,5 @@
-const conditionalSum = function(values, condition)
-{
+const conditionalSum = function(values, condition) {
+
   let total = 0;
 
   if (condition === "even") {
@@ -8,8 +8,7 @@ const conditionalSum = function(values, condition)
         total += values[i];
       }
     }
-  }
-  else {
+  } else {
     for (let i = 0; i < values.length; i++) {
       if (values[i] % 2 !== 0) {
         total += values[i];
@@ -18,6 +17,7 @@ const conditionalSum = function(values, condition)
   }
 
   return total;
+
 };
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even"));

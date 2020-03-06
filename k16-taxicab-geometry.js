@@ -1,5 +1,5 @@
-const blocksAway = function(directions)
-{
+const blocksAway = function(directions) {
+
   // A turn is 90 degrees, and is expressed as radians for use with the Math functions:
   const turnRadians = 90 * Math.PI / 180;
 
@@ -22,6 +22,7 @@ const blocksAway = function(directions)
   }
 
   return result;
+
 };
 
 console.log(blocksAway(["right", 2, "left", 3, "left", 1]));

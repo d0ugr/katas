@@ -1,5 +1,5 @@
-let repeatNumbers = function(data)
-{
+let repeatNumbers = function(data) {
+
   let result = "";
 
   for (let i = 0; i < data.length; i++) {
@@ -12,6 +12,7 @@ let repeatNumbers = function(data)
   }
 
   return result;
+
 };
 
 console.log(repeatNumbers([[1, 10]]));

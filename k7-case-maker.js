@@ -1,5 +1,5 @@
-let camelCase = function(input)
-{
+let camelCase = function(input) {
+
   let result = "";
 
   input = input.trim();
@@ -8,6 +8,7 @@ let camelCase = function(input)
   }
 
   return result;
+
 };
 
 console.log(camelCase("this is a string"));

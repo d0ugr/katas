@@ -1,5 +1,5 @@
-const urlDecode = function(text)
-{
+const urlDecode = function(text) {
+
   // Tired of writing loops to replace substrings...
   const pairs = text.replace(/%20/g, " ").split("&");
   let pair;
@@ -11,6 +11,7 @@ const urlDecode = function(text)
   }
 
   return result;
+
 };
 
 console.log(urlDecode("duck=rubber"));

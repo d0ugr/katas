@@ -1,10 +1,10 @@
-let sumLargestNumbers = function(data)
-{
-  data.sort(function(e1, e2)
-  {
+let sumLargestNumbers = function(data) {
+
+  data.sort(function(e1, e2) {
     return e1 < e2;
   });
   return data[0] + data[1];
+
 };
 
 console.log(sumLargestNumbers([1, 10]));

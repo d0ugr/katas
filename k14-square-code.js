@@ -1,5 +1,5 @@
-const squareCode = function(message)
-{
+const squareCode = function(message) {
+
   message = message.replace(/ /g, "");
 
   const width = Math.ceil(Math.sqrt(message.length));
@@ -12,11 +12,11 @@ const squareCode = function(message)
     for (j = i; j < message.length; j += width) {
       result += message.substring(j, j + 1);
     }
-//    result += "\n";
     result += " ";
   }
 
   return result.trim();
+
 };
 
 console.log(squareCode("chill out"));

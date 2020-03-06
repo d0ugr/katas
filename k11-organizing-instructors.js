@@ -1,5 +1,5 @@
-const organizeInstructors = function(instructors)
-{
+const organizeInstructors = function(instructors) {
+
   let result = {};
 
   for (let i = 0; i < instructors.length; i++) {
@@ -10,6 +10,7 @@ const organizeInstructors = function(instructors)
   }
 
   return result;
+
 };
 
 console.log(organizeInstructors([

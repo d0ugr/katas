@@ -1,28 +1,31 @@
-let talkingCalendar = function(date)
-{
+const talkingCalendar = function(date) {
+
   const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  function appendDaySuffix(day)
-  {
+  const appendDaySuffix = function(day) {
+
     day = day.toString();
     switch (day.slice(-1)) {
-      case "1":
-        day += (day !== "11" ? "st" : "th");
-        break;
-      case "2":
-        day += (day !== "12" ? "nd" : "th");
-        break;
-      case "3":
-        day += (day !== "13" ? "rd" : "th");
-        break;
-      default:
-        day += "th";
-        break;
+    case "1":
+      day += (day !== "11" ? "st" : "th");
+      break;
+    case "2":
+      day += (day !== "12" ? "nd" : "th");
+      break;
+    case "3":
+      day += (day !== "13" ? "rd" : "th");
+      break;
+    default:
+      day += "th";
+      break;
     }
+
     return day;
-  }
+
+  };
 
   return monthName[parseInt(date.substring(5, 7)) - 1] + " " + appendDaySuffix(parseInt(date.substring(8, 10))) + ", " + date.substring(0, 4);
+
 };
 
 console.log(talkingCalendar("2017/12/02"));

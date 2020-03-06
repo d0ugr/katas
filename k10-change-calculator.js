@@ -1,5 +1,5 @@
-let calculateChange = function(total, cash)
-{
+let calculateChange = function(total, cash) {
+
   const denominations = [
     { name: "twentyDollar", value: 2000 },
     { name: "tenDollar",    value: 1000 },
@@ -22,14 +22,14 @@ let calculateChange = function(total, cash)
     }
     if (!result[denominations[i].name]) {
       result[denominations[i].name] = 1;
-    }
-    else {
+    } else {
       result[denominations[i].name]++;
     }
     change -= denominations[i].value;
   }
 
   return result;
+
 };
 
 console.log(calculateChange(1787, 2000));

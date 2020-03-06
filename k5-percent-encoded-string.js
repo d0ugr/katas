@@ -1,5 +1,5 @@
-const urlEncode = function(text)
-{
+const urlEncode = function(text) {
+
   let result = "";
 
   text = text.trim();
@@ -8,6 +8,7 @@ const urlEncode = function(text)
   }
 
   return result;
+
 };
 
 console.log(urlEncode("Lighthouse Labs"));
